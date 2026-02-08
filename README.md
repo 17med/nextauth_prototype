@@ -27,6 +27,13 @@ Autorisation (Qu'avez-vous le droit de faire ?) : Une fois identifié, on vérif
 | **Analogie** | Une clé de voiture | Un permis de conduire |
 
 
+### installation
+```shell
+bun add next-auth
+```
 
-
+generate key (linux team only)
+```shell
+openssl rand -base64 32
+```
 
