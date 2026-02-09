@@ -32,7 +32,7 @@ Autorisation (Qu'avez-vous le droit de faire ?) : Une fois identifié, on vérif
 bun add next-auth
 ```
 
-generate key (linux team only)
+generate key (linux team only/windwos)
 ```shell
 openssl rand -base64 32
 ```
@@ -59,23 +59,6 @@ Got it — you started a solid guide and want it **completed according to the Ta
 A comprehensive guide to implementing secure authentication patterns in Next.js applications, covering session-based auth, JWT tokens, OAuth 2.0/OIDC, and protection against common web vulnerabilities.
 
 ---
-
-# 📋 Table of Contents
-
-* Overview ✅
-* Authentication Methods Comparison ✅
-* Session-Based Authentication ✅
-* Token-Based Authentication (JWT)
-* OAuth 2.0 & OpenID Connect
-* Security Threats & Mitigations
-* Implementation Guide
-* Best Practices
-* Resources
-
----
-
-# 🍪 Session-Based Authentication
-
 ## Implementation Example
 
 ```ts

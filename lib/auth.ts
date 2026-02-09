@@ -7,5 +7,16 @@ const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: process.env.AUTH_GOOGLE_SECRET || "",
     }),
   ],
+  callbacks: {
+    authorized({ auth, request: { nextUrl } }) {
+      const isLoggedIn = !!auth?.user;
+      const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
+
+      if (isLoggedIn && !isOnDashboard) {
+        return Response.redirect(new URL("/dashboard", nextUrl));
+      }
+      return true;
+    },
+  },
 });
 export { handlers, auth, signIn, signOut };
